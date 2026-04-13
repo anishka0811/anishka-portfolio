@@ -5,60 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anishka Sharma Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
+
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: #ffffff;
-    color: #111;
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #f5f5f5;
 }
 
+/* Container */
 .container {
-    width: 80%;
+    width: 85%;
+    max-width: 1100px;
     margin: auto;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    margin-top: 50px;
-    font-size: 22px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-p {
-    max-width: 700px;
-}
-
+/* Hero */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .hero img {
-    width: 280px;
-    border-radius: 10px;
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #d4af37;
 }
 
-.highlight {
-    font-weight: bold;
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
-a {
-    color: black;
-    text-decoration: none;
+.subtitle {
+    color: #bbb;
+    font-size: 18px;
 }
 
+/* Sections */
 .section {
-    margin-top: 30px;
+    margin-top: 70px;
 }
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+/* Cards */
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #d4af37;
+    color: black;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    margin-top: 50px;
+    color: #aaa;
+}
+
 </style>
 </head>
 
@@ -66,48 +103,53 @@ a {
 
 <div class="container">
 
+<!-- HERO -->
 <div class="hero">
-<div>
+<img src="anishka.jpg" alt="Anishka">
 <h1>Anishka Sharma</h1>
-<p>Media & Social Media Strategist<br>London | Global Experience</p>
+<p class="subtitle">Media & Social Media Strategist | London</p>
 </div>
 
-<img src="anishka.jpg" alt="Anishka Photo">
-</div>
-
+<!-- ABOUT -->
+<div class="section">
 <h2>About</h2>
 <p>
 A globally experienced media professional working at the intersection of content, culture, and community.
-With experience across India, China, and the UK, specialising in social media strategy, short-form video, and audience growth.
+With experience across India, China, and the UK, specialising in social media strategy and short-form content that drives measurable impact.
 </p>
+</div>
 
+<!-- WORK -->
+<div class="section">
 <h2>Selected Work</h2>
 
-<div class="section">
-<p class="highlight">Hiked (Bizgurukul)</p>
+<div class="card">
+<h3>Hiked (Bizgurukul)</h3>
 <p>
-Instagram-first strategy, influencer campaigns, and content execution.<br>
-+30% engagement growth, improved reach & impressions.
+Instagram-first strategy, influencer campaigns and content execution.<br>
++30% engagement growth with improved reach and impressions.
 </p>
 </div>
 
-<div class="section">
-<p class="highlight">Reel Work</p>
-<p>
-<a href="https://www.instagram.com/imperial__agents_/reel/DWMR5DZDSKk/" target="_blank">
-View Instagram Reel
-</a><br>
-Short-form video focused on storytelling, engagement, and retention.
-</p>
+<div class="card">
+<h3>Reel Project</h3>
+<p>Short-form video focused on storytelling and engagement.</p>
+<a href="https://www.instagram.com/imperial__agents_/reel/DWMR5DZDSKk/" target="_blank" class="button">
+View Reel
+</a>
 </div>
 
-<div class="section">
-<p class="highlight">Skylarks Charity (UK)</p>
+<div class="card">
+<h3>Skylarks Charity (UK)</h3>
 <p>
 Social media campaigns for awareness and fundraising initiatives.
 </p>
 </div>
 
+</div>
+
+<!-- IMPACT -->
+<div class="section">
 <h2>Impact</h2>
 <p>
 +30% Engagement Growth<br>
@@ -115,13 +157,13 @@ Multi-market experience (India, China, UK)<br>
 Influencer Campaign Execution<br>
 Audience Growth Strategy
 </p>
+</div>
 
-<h2>Contact</h2>
-<p>
-anishka.0811@gmail.com<br>
-07587989166<br>
-<a href="#">LinkedIn Profile</a>
-</p>
+<!-- CONTACT -->
+<div class="contact">
+<p>anishka.0811@gmail.com</p>
+<p>07587989166</p>
+</div>
 
 </div>
 
