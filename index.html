@@ -5,124 +5,156 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anishka Sharma Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    color: #f5f5f5;
-    background: radial-gradient(circle at top, #1c1c1c, #0a0a0a);
+    color: #2b2b2b;
+    background: linear-gradient(180deg, #d9c8bb, #efe4db);
 }
 
 /* NAV */
 .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 8%;
-    font-size: 14px;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 .nav a {
-    color: #ccc;
     text-decoration: none;
-    margin-left: 20px;
+    color: #333;
+    font-size: 14px;
 }
 
-/* CONTAINER */
-.container {
-    width: 85%;
-    max-width: 1100px;
-    margin: auto;
+/* SIDE DOTS */
+.dots {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+}
+
+.dots div {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin: 10px 0;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 10%;
+    min-height: 100vh;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    margin: 0;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    letter-spacing: 1px;
 }
 
 .hero img {
-    width: 160px;
-    border-radius: 50%;
-    border: 2px solid #d4af37;
+    width: 400px;
+    border-radius: 10px;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    margin: 20px 0 10px;
+/* BUTTON */
+.button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
 }
 
-.subtitle {
-    color: #bbb;
+.button:hover {
+    background: #333;
+    color: #fff;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
-    margin-top: 80px;
+    padding: 100px 10%;
+    max-width: 900px;
+    margin: auto;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
 }
 
-.section h2 {
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
     font-family: 'Playfair Display', serif;
-    color: #d4af37;
-    margin-bottom: 20px;
 }
 
-/* GRID WORK */
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.4);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
+}
+
+/* VIDEO */
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
 }
 
 /* SKILLS */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .skills span {
-    border: 1px solid #d4af37;
-    padding: 6px 12px;
-    margin: 6px;
-    border-radius: 20px;
-    font-size: 13px;
-}
-
-/* BUTTON */
-.button {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 14px;
-    border: 1px solid #d4af37;
-    color: #d4af37;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background: #d4af37;
-    color: black;
+    margin: 5px;
+    padding: 6px 12px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    font-size: 12px;
 }
 
 /* CONTACT */
 .contact {
     text-align: center;
-    margin: 80px 0;
-    color: #aaa;
 }
 
 </style>
@@ -132,41 +164,41 @@ h1 {
 
 <!-- NAV -->
 <div class="nav">
-<div>Anishka</div>
-<div>
+<a href="#home">Home</a>
 <a href="#work">Work</a>
 <a href="#contact">Contact</a>
 </div>
-</div>
 
-<div class="container">
+<!-- SIDE DOTS -->
+<div class="dots">
+<div></div><div></div><div></div><div></div>
+</div>
 
 <!-- HERO -->
-<div class="hero">
-<img src="anishka.jpg">
+<section class="hero" id="home">
+<div class="hero-text">
 <h1>Anishka Sharma</h1>
-<p class="subtitle">Media & Social Media Strategist | Global Talent</p>
+<p>Social Media • Digital • Branding</p>
+<a href="#work" class="button">View Portfolio</a>
 </div>
+<img src="anishka.jpg">
+</section>
 
 <!-- ABOUT -->
-<div class="section">
+<section class="section">
 <h2>About</h2>
 <p>
-A globally experienced media professional with expertise in content creation, digital strategy, and audience growth. 
-With exposure across India, China, and the UK, Anishka combines cultural understanding with data-driven execution to create impactful campaigns.
+A globally experienced media strategist with expertise in content creation, video production, and digital growth. 
+Having worked across India, China, and the UK, I bring a culturally aware and insight-driven approach to storytelling and brand building.
 </p>
 
 <p>
-She specialises in building high-performing content ecosystems — from ideation to execution — helping brands increase visibility, engagement, and conversions.
+Open to global roles, freelance/contract opportunities, and available for immediate joining.
 </p>
-
-<p>
-Currently open to global opportunities, freelance/contract roles, and available for immediate joining.
-</p>
-</div>
+</section>
 
 <!-- SKILLS -->
-<div class="section">
+<section class="section">
 <h2>Core Skills</h2>
 <div class="skills">
 <span>Content Creation</span>
@@ -175,79 +207,65 @@ Currently open to global opportunities, freelance/contract roles, and available 
 <span>SEO</span>
 <span>Google Ads</span>
 <span>Meta Ads</span>
-<span>Influencer Marketing</span>
-<span>Brand Strategy</span>
-<span>Campaign Execution</span>
 <span>Excel & Reporting</span>
 <span>Presentation Design</span>
-<span>Media Planning</span>
 <span>Content Calendar</span>
 </div>
-</div>
+</section>
 
 <!-- WORK -->
-<div class="section" id="work">
+<section class="section" id="work">
 <h2>Selected Work</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Hiked (Bizgurukul)</h3>
-<p>
-Executed social media strategy and influencer campaigns driving up to 30% engagement growth and increased reach.
-</p>
+<h3>Hiked</h3>
+<p>30% engagement growth through social media campaigns.</p>
 </div>
 
 <div class="card">
-<h3>Reel Campaign</h3>
-<p>
-Created engaging short-form content optimised for audience retention and platform growth.
-</p>
-<a href="https://www.instagram.com/imperial__agents_/reel/DWMR5DZDSKk/" target="_blank" class="button">View Reel</a>
+<h3>Reel Project</h3>
+<iframe src="https://www.instagram.com/p/DWMR5DZDSKk/embed"></iframe>
 </div>
 
 <div class="card">
-<h3>Skylarks Charity (UK)</h3>
-<p>
-Developed content for awareness campaigns, improving digital presence and engagement.
-</p>
+<h3>Skylarks</h3>
+<p>Content strategy for awareness campaigns.</p>
 </div>
 
 <div class="card">
 <h3>Influencer Growth</h3>
-<p>
-Helped multiple influencers achieve up to 30% increase in engagement, reach, and visibility.
-</p>
+<p>Improved reach and engagement by 30%.</p>
 </div>
 
 </div>
-</div>
 
-<!-- WHY HIRE -->
-<div class="section">
-<h2>Why Hire Me</h2>
-<p>
-I combine creativity with analytics to deliver results. My strength lies in understanding audience behaviour, leveraging trends, and executing content strategies that drive measurable growth. 
-I bring both strategic thinking and hands-on execution, making me a valuable addition to any modern media or marketing team.
-</p>
-</div>
+</section>
 
 <!-- CONTACT -->
-<div class="contact" id="contact">
+<section class="section contact" id="contact">
+<h2>Contact</h2>
 <p><b>Open to Global Roles | Freelance | Immediate Joiner</b></p>
+<p>anishka.0811@gmail.com</p>
+<p>+44 7587989166 | +91 8869013333</p>
+</section>
 
-<p>Email: <a href="mailto:anishka.0811@gmail.com">anishka.0811@gmail.com</a></p>
+<script>
 
-<p>
-<a href="https://www.linkedin.com/in/anishka-sharma-2bb1a81a0/" target="_blank">LinkedIn</a> |
-<a href="https://www.instagram.com/anishka_._sharma/" target="_blank">Instagram</a>
-</p>
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll('.section');
 
-<p>UK: +44 7587989166 | India: +91 8869013333</p>
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add('visible');
+}
+});
+});
 
-</div>
-
-</div>
+</script>
 
 </body>
 </html>
