@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anishka Sharma Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,60 +13,73 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: #f5f5f5;
-
-    /* SUBTLE LUXURY BACKGROUND */
-    background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
+    background: radial-gradient(circle at top, #1c1c1c, #0a0a0a);
 }
 
-/* container */
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    font-size: 14px;
+}
+
+.nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* CONTAINER */
 .container {
     width: 85%;
     max-width: 1100px;
     margin: auto;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
     padding: 60px 0;
 }
 
-/* hero */
-.hero {
-    text-align: center;
-}
-
 .hero img {
-    width: 170px;
+    width: 160px;
     border-radius: 50%;
-    margin-bottom: 20px;
     border: 2px solid #d4af37;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    margin: 20px 0 10px;
 }
 
 .subtitle {
-    color: #ccc;
-    font-size: 18px;
+    color: #bbb;
 }
 
-/* section */
+/* SECTION */
 .section {
     margin-top: 80px;
 }
 
 .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 26px;
     color: #d4af37;
     margin-bottom: 20px;
 }
 
-/* card */
+/* GRID WORK */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 .card {
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(8px);
-    padding: 22px;
-    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 12px;
     transition: 0.3s;
 }
@@ -75,16 +88,29 @@ h1 {
     transform: translateY(-6px);
 }
 
-/* button */
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills span {
+    border: 1px solid #d4af37;
+    padding: 6px 12px;
+    margin: 6px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* BUTTON */
 .button {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 18px;
+    padding: 8px 14px;
     border: 1px solid #d4af37;
     color: #d4af37;
     text-decoration: none;
     border-radius: 5px;
-    transition: 0.3s;
 }
 
 .button:hover {
@@ -92,20 +118,10 @@ h1 {
     color: black;
 }
 
-/* skills */
-.skills span {
-    display: inline-block;
-    border: 1px solid #d4af37;
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 13px;
-}
-
-/* contact */
+/* CONTACT */
 .contact {
     text-align: center;
-    margin-top: 60px;
+    margin: 80px 0;
     color: #aaa;
 }
 
@@ -114,11 +130,20 @@ h1 {
 
 <body>
 
+<!-- NAV -->
+<div class="nav">
+<div>Anishka</div>
+<div>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
 <div class="container">
 
 <!-- HERO -->
 <div class="hero">
-<img src="anishka.jpg" alt="Anishka">
+<img src="anishka.jpg">
 <h1>Anishka Sharma</h1>
 <p class="subtitle">Media & Social Media Strategist | Global Talent</p>
 </div>
@@ -127,26 +152,25 @@ h1 {
 <div class="section">
 <h2>About</h2>
 <p>
-A globally experienced media and marketing professional with a strong foundation in content creation, audience growth, and digital storytelling. 
-With academic and professional exposure across India, China, and the UK, Anishka brings a culturally aware and insight-driven approach to modern media.
+A globally experienced media professional with expertise in content creation, digital strategy, and audience growth. 
+With exposure across India, China, and the UK, Anishka combines cultural understanding with data-driven execution to create impactful campaigns.
 </p>
 
 <p>
-She specialises in building engaging digital experiences through strategic content, short-form video, and performance-driven campaigns—helping brands grow visibility, engagement, and community.
+She specialises in building high-performing content ecosystems — from ideation to execution — helping brands increase visibility, engagement, and conversions.
 </p>
 
 <p>
-Currently seeking opportunities across the globe, Anishka is open to full-time roles as well as contractual projects and is available for immediate joining.
+Currently open to global opportunities, freelance/contract roles, and available for immediate joining.
 </p>
 </div>
 
 <!-- SKILLS -->
 <div class="section">
-<h2>Core Expertise</h2>
+<h2>Core Skills</h2>
 <div class="skills">
 <span>Content Creation</span>
 <span>Video Production</span>
-<span>Social Media Strategy</span>
 <span>Media Management</span>
 <span>SEO</span>
 <span>Google Ads</span>
@@ -154,54 +178,73 @@ Currently seeking opportunities across the globe, Anishka is open to full-time r
 <span>Influencer Marketing</span>
 <span>Brand Strategy</span>
 <span>Campaign Execution</span>
+<span>Excel & Reporting</span>
+<span>Presentation Design</span>
+<span>Media Planning</span>
+<span>Content Calendar</span>
 </div>
 </div>
 
 <!-- WORK -->
-<div class="section">
+<div class="section" id="work">
 <h2>Selected Work</h2>
+
+<div class="grid">
 
 <div class="card">
 <h3>Hiked (Bizgurukul)</h3>
 <p>
-Led Instagram-first content strategy and influencer campaigns targeting Gen-Z audiences.
-Delivered performance-driven content resulting in up to 30% growth in engagement, along with significant improvements in reach and impressions.
+Executed social media strategy and influencer campaigns driving up to 30% engagement growth and increased reach.
 </p>
 </div>
 
 <div class="card">
-<h3>Short-form Video Campaign</h3>
+<h3>Reel Campaign</h3>
 <p>
-Created engaging reel content focused on storytelling, audience retention, and platform optimisation.
+Created engaging short-form content optimised for audience retention and platform growth.
 </p>
-<a href="https://www.instagram.com/imperial__agents_/reel/DWMR5DZDSKk/" target="_blank" class="button">
-View Reel
-</a>
+<a href="https://www.instagram.com/imperial__agents_/reel/DWMR5DZDSKk/" target="_blank" class="button">View Reel</a>
 </div>
 
 <div class="card">
 <h3>Skylarks Charity (UK)</h3>
 <p>
-Developed social media content supporting awareness campaigns and community engagement initiatives, contributing to stronger digital presence for the organisation.
+Developed content for awareness campaigns, improving digital presence and engagement.
 </p>
 </div>
 
+<div class="card">
+<h3>Influencer Growth</h3>
+<p>
+Helped multiple influencers achieve up to 30% increase in engagement, reach, and visibility.
+</p>
+</div>
+
+</div>
 </div>
 
 <!-- WHY HIRE -->
 <div class="section">
-<h2>Why Work With Me</h2>
+<h2>Why Hire Me</h2>
 <p>
-Combining creativity with strategy, Anishka brings a results-oriented mindset to every project. Her ability to understand audience behaviour, adapt to trends, and execute high-impact content makes her a valuable asset for brands looking to grow in the digital space.
+I combine creativity with analytics to deliver results. My strength lies in understanding audience behaviour, leveraging trends, and executing content strategies that drive measurable growth. 
+I bring both strategic thinking and hands-on execution, making me a valuable addition to any modern media or marketing team.
 </p>
 </div>
 
 <!-- CONTACT -->
-<div class="contact">
-<p><b>Available for Global Opportunities & Freelance Projects</b></p>
-<p>Immediate Joiner</p>
-<p>anishka.0811@gmail.com</p>
-<p>07587989166</p>
+<div class="contact" id="contact">
+<p><b>Open to Global Roles | Freelance | Immediate Joiner</b></p>
+
+<p>Email: <a href="mailto:anishka.0811@gmail.com">anishka.0811@gmail.com</a></p>
+
+<p>
+<a href="https://www.linkedin.com/in/anishka-sharma-2bb1a81a0/" target="_blank">LinkedIn</a> |
+<a href="https://www.instagram.com/anishka_._sharma/" target="_blank">Instagram</a>
+</p>
+
+<p>UK: +44 7587989166 | India: +91 8869013333</p>
+
 </div>
 
 </div>
